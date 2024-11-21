@@ -1,6 +1,12 @@
-function fetchBooks() {
+/*function fetchBooks() {
   // To pass the tests, don't forget to return your fetch!
   
+}*/
+
+function fetchBooks() {
+  fetch("https://anapioficeandfire.com/api/books")
+  .then((resp) => resp.json())
+  .then((bookData) => console.log(bookData.map(book => book.characters[1030])))
 }
 
 function renderBooks(books) {
@@ -15,3 +21,5 @@ function renderBooks(books) {
 document.addEventListener('DOMContentLoaded', function() {
   fetchBooks();
 });
+
+fetch("ttps://anapioficeandfire.com/api/books", renderBooks);
